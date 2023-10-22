@@ -1,0 +1,18 @@
+.card-header{
+    display: flex;
+}
+
+.register-btn{
+    background-color: #9B51E0;
+    padding: 10px 25px;
+    border-radius: 20px;
+    border: none;
+    font-weight: 700;
+    color: #4E0A8E;
+    cursor: pointer;
+}
+.search-input {
+    display: flex;
+    align-items: flex-end;
+    margin-left: auto;
+}

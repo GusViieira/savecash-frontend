@@ -51,15 +51,15 @@
 
   .sidebar-content-menu{
     display: flex;
-    padding: 0.5em;
-    justify-content: start;
+    padding: 0.7em;
+    justify-content: flex-start;
   }
 
   .sidebar-content-menu:hover{
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     color:#fff;
-    padding: 0.2em;
+    padding: 0.5em;
     cursor: pointer;
   }
 

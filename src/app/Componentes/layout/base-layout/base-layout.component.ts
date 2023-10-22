@@ -62,6 +62,20 @@ constructor(private router: Router, private mainStore: MainStore) {}
               // this.update();
             }
 
+          },
+          {
+            label: 'Configurações',
+            icon: 'pi pi-wrench',
+            command: () => {
+              // this.update();
+            }
+          },
+          {
+            label: 'Sair',
+            icon: 'pi pi-sign-out',
+            command: () => {
+              // this.update();
+            }
           }
         ]
       }

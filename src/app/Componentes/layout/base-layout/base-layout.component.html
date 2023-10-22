@@ -24,8 +24,8 @@
                 {{ email }}
             </div>
             <p-divider></p-divider>
-            <div class="sidebar-content-menu" *ngFor="let item of items">
-                <div class="sidebar-content-menu-item" (click)="goRoute(item.routerLink)">
+            <div class="sidebar-content-menu" *ngFor="let item of items" (click)="goRoute(item.routerLink)">
+                <div class="sidebar-content-menu-item" >
                     <i [ngClass]="item.icon" class="sidebar-content-menu-icon"></i>
                     {{ item.label }}
                 </div>
@@ -33,9 +33,6 @@
         </div>
     </ng-template>
     <ng-template pTemplate="footer">
-        <div>
-            <i class="pi pi-sign-out"></i>
-        </div>
     </ng-template>
 </p-sidebar>
 <div class="page-name">
