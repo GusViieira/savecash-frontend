@@ -23,6 +23,8 @@ import { InputTextModule } from 'primeng/inputtext';
 import { TableModule } from 'primeng/table';
 import { RatingModule } from 'primeng/rating';
 import { TagModule } from 'primeng/tag';
+import { PerfilComponent } from './Componentes/Views/perfil/perfil.component';
+import { ConfiguracoesComponent } from './Componentes/Views/configuracoes/configuracoes.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,9 @@ import { TagModule } from 'primeng/tag';
     CaixinhasComponent,
     MetasFinanceirasComponent,
     BaseLayoutComponent,
-    AppCardComponent
+    AppCardComponent,
+    PerfilComponent,
+    ConfiguracoesComponent
   ],
   imports: [
     BrowserModule,

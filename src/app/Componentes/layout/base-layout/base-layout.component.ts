@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { MainStore } from 'src/app/Store/main-store';
 
 
@@ -17,8 +17,8 @@ export class BaseLayoutComponent implements OnInit {
   items: MenuItem[] | undefined
   itemsMenu: MenuItem[] | undefined
   routeName: any;
-  
-constructor(private router: Router, private mainStore: MainStore) {}
+
+  constructor(private router: Router, private mainStore: MainStore) { }
 
 
 
@@ -58,14 +58,16 @@ constructor(private router: Router, private mainStore: MainStore) {}
           {
             label: 'Perfil',
             icon: 'pi pi-user',
+            routerLink: "profile",
             command: () => {
-              // this.update();
+
             }
 
           },
           {
             label: 'Configurações',
             icon: 'pi pi-wrench',
+            routerLink: "settings",
             command: () => {
               // this.update();
             }
@@ -80,9 +82,10 @@ constructor(private router: Router, private mainStore: MainStore) {}
         ]
       }
     ];
+
   }
 
-  goRoute(route: string){
+  goRoute(route: string) {
     this.router.navigate([route])
     this.sidebarVisible = false
   }

@@ -4,6 +4,8 @@ import { HomeComponent } from './Componentes/Views/home/home.component';
 import { LancamentosComponent } from './Componentes/Views/lancamentos/lancamentos.component';
 import { CaixinhasComponent } from './Componentes/Views/caixinhas/caixinhas.component';
 import { MetasFinanceirasComponent } from './Componentes/Views/metas-financeiras/metas-financeiras.component';
+import { PerfilComponent } from './Componentes/Views/perfil/perfil.component';
+import { ConfiguracoesComponent } from './Componentes/Views/configuracoes/configuracoes.component';
 
 const routes: Routes = [
   {
@@ -26,10 +28,24 @@ const routes: Routes = [
     }
   },
   {
-    path: 'metas',
+    path: 'goals',
     component: MetasFinanceirasComponent,
     data: {
       name: 'Metas financeiras'
+    }
+  },
+  {
+    path: 'profile',
+    component: PerfilComponent,
+    data: {
+      name: 'Perfil'
+    }
+  },
+  {
+    path: 'settings',
+    component: ConfiguracoesComponent,
+    data: {
+      name: 'Configurações'
     }
   }
 ];
