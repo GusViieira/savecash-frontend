@@ -6,7 +6,7 @@ import { Subject } from 'rxjs';
 })
 export class MainStore {
  routeName: Subject<string> = new Subject();
-
+ themeName: Subject<string> = new Subject();
  constructor(){}
 
  getRouteName(){
@@ -15,6 +15,14 @@ export class MainStore {
 
  setRouteName(value: string){
   this.routeName.next(value)
+ }
+
+ getThemeName(){
+  return this.themeName.asObservable();
+ }
+
+ setThemeName(value: string){
+  this.themeName.next(value)
  }
 
 }

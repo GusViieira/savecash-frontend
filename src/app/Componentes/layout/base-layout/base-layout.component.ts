@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
-import { ActivatedRoute, Router, RouterLink } from '@angular/router';
+import { Router } from '@angular/router';
 import { MainStore } from 'src/app/Store/main-store';
+
 
 
 @Component({
@@ -18,12 +19,13 @@ export class BaseLayoutComponent implements OnInit {
   itemsMenu: MenuItem[] | undefined
   routeName: any;
 
-  constructor(private router: Router, private mainStore: MainStore) { }
+  constructor(private router: Router, private mainStore: MainStore) {}
 
 
 
 
   ngOnInit(): void {
+    this.changeTheme("light")
     this.mainStore.getRouteName().subscribe(v => {
       this.routeName = v
     })
@@ -47,7 +49,7 @@ export class BaseLayoutComponent implements OnInit {
       {
         label: "Metas financeiras",
         icon: "pi pi-check-square",
-        routerLink: "metas"
+        routerLink: "goals"
       }
     ]
 
@@ -88,6 +90,11 @@ export class BaseLayoutComponent implements OnInit {
   goRoute(route: string) {
     this.router.navigate([route])
     this.sidebarVisible = false
+  }
+
+  changeTheme(value: string){
+    console.log(value)
+    this.mainStore.setThemeName(value)
   }
 }
 

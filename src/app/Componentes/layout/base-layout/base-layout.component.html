@@ -1,3 +1,4 @@
+
 <p-toolbar>
     <ng-template pTemplate="start">
         <button class="p-toolbar-separator pi pi-bars btn-sidebar" (click)="sidebarVisible = true"></button>
@@ -33,6 +34,7 @@
         </div>
     </ng-template>
     <ng-template pTemplate="footer">
+        <button class="pi pi-moon" (click)="changeTheme('dark')"></button>
     </ng-template>
 </p-sidebar>
 <div class="page-name">
