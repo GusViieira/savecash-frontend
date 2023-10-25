@@ -1,6 +1,6 @@
 <app-app-card>
     <div class="card-header">
-        <button class="register-btn">
+        <button class="register-btn" (click)="abrirModal = true">
             Registrar
             <i class="pi pi-plus"></i>
         </button>
@@ -15,3 +15,11 @@
         <h1>aqui vai ficar uma tabela</h1>
     </div>
 </app-app-card>
+<app-app-modal *ngIf="abrirModal" (visibleChange)="updateVisibility($event)">
+    <div class="card-body">
+        <input type="text" pInputText />
+        <input type="text" pInputText />
+        <input type="text" pInputText />
+        <input type="text" pInputText />
+    </div>
+</app-app-modal>

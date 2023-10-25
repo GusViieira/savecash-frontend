@@ -25,6 +25,8 @@ import { RatingModule } from 'primeng/rating';
 import { TagModule } from 'primeng/tag';
 import { PerfilComponent } from './Componentes/Views/perfil/perfil.component';
 import { ConfiguracoesComponent } from './Componentes/Views/configuracoes/configuracoes.component';
+import { AppModalComponent } from './Componentes/modules/app-modal/app-modal.component';
+import { DialogModule } from 'primeng/dialog';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,8 @@ import { ConfiguracoesComponent } from './Componentes/Views/configuracoes/config
     BaseLayoutComponent,
     AppCardComponent,
     PerfilComponent,
-    ConfiguracoesComponent
+    ConfiguracoesComponent,
+    AppModalComponent
   ],
   imports: [
     BrowserModule,
@@ -54,7 +57,8 @@ import { ConfiguracoesComponent } from './Componentes/Views/configuracoes/config
     InputTextModule,
     TableModule,
     RatingModule,
-    TagModule
+    TagModule,
+    DialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
