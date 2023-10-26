@@ -27,6 +27,10 @@ import { PerfilComponent } from './Componentes/Views/perfil/perfil.component';
 import { ConfiguracoesComponent } from './Componentes/Views/configuracoes/configuracoes.component';
 import { AppModalComponent } from './Componentes/modules/app-modal/app-modal.component';
 import { DialogModule } from 'primeng/dialog';
+import { InputNumberModule } from 'primeng/inputnumber';
+import { CalendarModule } from 'primeng/calendar';
+import { CheckboxModule } from 'primeng/checkbox';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -54,11 +58,15 @@ import { DialogModule } from 'primeng/dialog';
     MenuModule,
     ToastModule,
     CardModule,
-    InputTextModule,
     TableModule,
     RatingModule,
     TagModule,
-    DialogModule
+    DialogModule,
+    InputNumberModule,
+    CalendarModule,
+    CheckboxModule,
+    InputTextModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -15,11 +15,24 @@
         <h1>aqui vai ficar uma tabela</h1>
     </div>
 </app-app-card>
-<app-app-modal *ngIf="abrirModal" (visibleChange)="updateVisibility($event)">
+<app-app-modal *ngIf="abrirModal" (visibleChange)="updateVisibility($event)" tituloModal="Registrar novo lançamento">
     <div class="card-body">
-        <input type="text" pInputText />
-        <input type="text" pInputText />
-        <input type="text" pInputText />
-        <input type="text" pInputText />
+        <button [ngClass]="btnLancamento === true ? 'btn-receita' : 'btn-receita-disabled'"
+            (click)="btnLancamento = true"><i class="pi pi-plus"></i> Receita</button>
+        <button class="btn-despesa" [ngClass]="!btnLancamento === true ? 'btn-despesa' : 'btn-despesa-disabled'"
+            (click)="btnLancamento = false"><i class="pi pi-minus"></i> Despesa</button>
+        <div class="form-group">
+            <form [formGroup]="formGroup">
+                <p-inputNumber label="Valor" />
+                <p-calendar label="Data de vencimento" [showIcon]="true" />
+                <input type="text" pInputText label="Descrição" />
+                <p-calendar label="Data de pagamento" [showIcon]="true" />
+                <p-inputNumber label="Salário" />
+                <input type="text" pInputText label="Flash" />
+                <input type="text" pInputText label="Anotação" />
+                <p-checkbox label="Recorrente" />
+                <p-button type="submit" value="Salvar" />
+            </form>
+        </div>
     </div>
 </app-app-modal>

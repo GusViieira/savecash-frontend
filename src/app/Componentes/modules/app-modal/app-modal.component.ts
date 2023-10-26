@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Subject } from 'rxjs';
 
 
@@ -9,7 +9,7 @@ import { Subject } from 'rxjs';
 })
 export class AppModalComponent {
   private _visible: boolean = true;
-
+  @Input() tituloModal?: string;
   @Output() visibleChange = new EventEmitter<boolean>();
 
   private visibleChangeSubject = new Subject<boolean>();

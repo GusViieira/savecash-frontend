@@ -5,14 +5,57 @@
 .register-btn{
     background-color: #9B51E0;
     padding: 10px 25px;
-    border-radius: 20px;
+    border-radius: 10px;
     border: none;
     font-weight: 700;
     color: #4E0A8E;
     cursor: pointer;
 }
+
 .search-input {
     display: flex;
     align-items: flex-end;
     margin-left: auto;
 }
+
+.btn-receita{
+    background-color: #27AE60;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: #27AE60 solid 2px;
+    font-weight: 700;
+    color: #005725;
+    cursor: pointer;
+}
+
+.btn-receita-disabled{
+    background-color: #5C5C5C;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: #27AE60 solid 2px;
+    font-weight: 700;
+    color: #27AE60;
+    cursor: pointer;
+}
+
+.btn-despesa{
+    background-color: #EB5757;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: #EB5757 solid 2px;
+    font-weight: 700;
+    color: #880000;
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+.btn-despesa-disabled{
+    background-color: #5C5C5C;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: #EB5757 solid 2px;
+    font-weight: 700;
+    color: #EB5757;
+    cursor: pointer;
+}
+
