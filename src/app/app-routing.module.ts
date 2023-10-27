@@ -9,7 +9,11 @@ import { ConfiguracoesComponent } from './Componentes/Views/configuracoes/config
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'login',
+    component: HomeComponent,
+  },
+  {
+    path: 'home',
     component: HomeComponent,
     data: {
       name: 'Dashboard'
