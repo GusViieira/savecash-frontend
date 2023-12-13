@@ -31,6 +31,9 @@ import { InputNumberModule } from 'primeng/inputnumber';
 import { CalendarModule } from 'primeng/calendar';
 import { CheckboxModule } from 'primeng/checkbox';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './Componentes/Views/login/login.component';
+import { ImageModule } from 'primeng/image';
+import { PasswordModule } from 'primeng/password';
 
 @NgModule({
   declarations: [
@@ -43,7 +46,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppCardComponent,
     PerfilComponent,
     ConfiguracoesComponent,
-    AppModalComponent
+    AppModalComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -66,7 +70,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     CalendarModule,
     CheckboxModule,
     InputTextModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ImageModule,
+    PasswordModule
   ],
   providers: [],
   bootstrap: [AppComponent]

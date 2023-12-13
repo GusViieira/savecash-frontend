@@ -15,6 +15,7 @@
         <h1>aqui vai ficar uma tabela</h1>
     </div>
 </app-app-card>
+
 <app-app-modal *ngIf="abrirModal" (visibleChange)="updateVisibility($event)" tituloModal="Registrar novo lançamento">
     <div class="card-body">
 
@@ -25,15 +26,15 @@
                 (click)="btnLancamento = false"><i class="pi pi-minus"></i> Despesa</button>
         </div>
 
-        <div class="flex gap-3">
-            <div
-                class="flex-grow-1 flex align-items-center justify-content-center">
-                <input pInputText class="w-full"/>
-            </div>
-            <div
-                class="flex-grow-1 flex align-items-center justify-content-center">
-                <input pInputText class="w-full"/></div>
-
+        <div class="flex gap-3" *ngIf="btnLancamento">
+                <span class="p-float-label flex-grow-1 flex align-items-center justify-content-center">
+                <input pInputText id="username" class="w-full" />
+                <label htmlFor="username">Username</label>
+                </span>
+                <span class="p-float-label flex-grow-1 flex align-items-center justify-content-center">
+                <input pInputText class="w-full" />
+                <label htmlFor="username">Username</label>
+                </span>
         </div>
     </div>
 </app-app-modal>

@@ -1,42 +1,53 @@
-
 <p-toolbar>
-    <ng-template pTemplate="start">
-        <button class="p-toolbar-separator pi pi-bars btn-sidebar" (click)="sidebarVisible = true"></button>
-    </ng-template>
-    <ng-template pTemplate="center">
-        <span class="text-primary font-semibold text-xl">SaveCa$h</span>
-    </ng-template>
-    <ng-template pTemplate="end">
-        <p-menu #menu [model]="itemsMenu" [popup]="true"></p-menu>
-        <p-avatar image="./assets/profile.png" shape="circle" size="large" class="ng-template-end"
-            (click)="menu.toggle($event)"></p-avatar>
-    </ng-template>
+  <ng-template pTemplate="start">
+    <button
+      class="p-toolbar-separator pi pi-bars btn-sidebar"
+      (click)="sidebarVisible = true"
+    ></button>
+  </ng-template>
+  <ng-template pTemplate="center">
+    <span class="text-primary font-semibold text-xl">SaveCa$h</span>
+  </ng-template>
+  <ng-template pTemplate="end">
+    <p-menu #menu [model]="itemsMenu" [popup]="true"></p-menu>
+    <p-avatar
+      image="./assets/profile.png"
+      shape="circle"
+      size="large"
+      class="ng-template-end"
+      (click)="menu.toggle($event)"
+    ></p-avatar>
+  </ng-template>
 </p-toolbar>
 
 <p-sidebar [(visible)]="sidebarVisible">
-    <ng-template pTemplate="content">
-        <div class="sidebar-content">
-            <img src="./assets/profile.png" class="avatar-user" />
-            <div class="sidebar-content-name">
-                {{ name }}
-                {{ lastName }}
-            </div>
-            <div class="sidebar-content-email">
-                {{ email }}
-            </div>
-            <p-divider></p-divider>
-            <div class="sidebar-content-menu" *ngFor="let item of items" (click)="goRoute(item.routerLink)">
-                <div class="sidebar-content-menu-item" >
-                    <i [ngClass]="item.icon" class="sidebar-content-menu-icon"></i>
-                    {{ item.label }}
-                </div>
-            </div>
+  <ng-template pTemplate="content">
+    <div class="sidebar-content">
+      <img src="./assets/profile.png" class="avatar-user" />
+      <div class="sidebar-content-name">
+        {{ name }}
+        {{ lastName }}
+      </div>
+      <div class="sidebar-content-email">
+        {{ email }}
+      </div>
+      <p-divider></p-divider>
+      <div
+        class="sidebar-content-menu"
+        *ngFor="let item of items"
+        (click)="goRoute(item.routerLink)"
+      >
+        <div class="sidebar-content-menu-item">
+          <i [ngClass]="item.icon" class="sidebar-content-menu-icon"></i>
+          {{ item.label }}
         </div>
-    </ng-template>
-    <ng-template pTemplate="footer">
-        <button class="pi pi-moon" (click)="changeTheme('dark')"></button>
-    </ng-template>
+      </div>
+    </div>
+  </ng-template>
 </p-sidebar>
 <div class="page-name">
-    <h1>{{ routeName }}</h1>
+  <h1>{{ routeName }}</h1>
+</div>
+<div class="content-template">
+  <router-outlet />
 </div>

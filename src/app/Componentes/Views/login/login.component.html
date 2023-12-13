@@ -1,0 +1,28 @@
+<div class="main-container">
+  <div class="login-form-container">
+    <div class="logo-container">
+      <span class="text-primary font-semibold text-xl">SaveCa$h</span>
+    </div>
+
+    <div class="flex flex-column gap-2">
+      <div class="flex align-items-center justify-content-center h-4rem">
+        <span class="p-float-label">
+          <input pInputText id="username" size="24" />
+          <label for="username">Usuário</label>
+        </span>
+      </div>
+      <div class="flex align-items-center justify-content-center h-4rem">
+        <span class="p-float-label">
+          <p-password [toggleMask]="true" [feedback]="false"/>
+          <label for="username">Senha</label>
+        </span>
+      </div>
+      <div class="flex align-items-center justify-content-center h-4rem">
+        <p-button label="Entrar" (onClick)="login()" />
+      </div>
+    </div>
+  </div>
+  <div class="login-image">
+    <img src="assets/login.svg" width="500" />
+  </div>
+</div>

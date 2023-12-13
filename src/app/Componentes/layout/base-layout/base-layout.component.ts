@@ -21,11 +21,7 @@ export class BaseLayoutComponent implements OnInit {
 
   constructor(private router: Router, private mainStore: MainStore) {}
 
-
-
-
   ngOnInit(): void {
-    this.changeTheme("light")
     this.mainStore.getRouteName().subscribe(v => {
       this.routeName = v
     })
@@ -34,7 +30,7 @@ export class BaseLayoutComponent implements OnInit {
       {
         label: "Dashboard",
         icon: "pi pi-chart-line",
-        routerLink: ""
+        routerLink: "home"
       },
       {
         label: "Lançamentos",
@@ -77,6 +73,7 @@ export class BaseLayoutComponent implements OnInit {
           {
             label: 'Sair',
             icon: 'pi pi-sign-out',
+            routerLink: "login",
             command: () => {
               // this.update();
             }
@@ -92,9 +89,6 @@ export class BaseLayoutComponent implements OnInit {
     this.sidebarVisible = false
   }
 
-  changeTheme(value: string){
-    console.log(value)
-    this.mainStore.setThemeName(value)
-  }
+
 }
 
