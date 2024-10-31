@@ -3,17 +3,16 @@ import { FormGroup, FormControl } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { MainStore } from 'src/app/Store/main-store';
 
-
 @Component({
   selector: 'app-lancamentos',
   templateUrl: './lancamentos.component.html',
-  styleUrls: ['./lancamentos.component.scss']
+  styleUrls: ['./lancamentos.component.scss'],
 })
 export class LancamentosComponent {
   value: string | undefined;
-  abrirModal = false
-  btnLancamento = true
-  tituloModal = 'Lançamentos'; 
+  isModalOpen = false;
+  btnLancamento = true;
+  tituloModal = 'Lançamentos';
   formGroup: FormGroup;
 
   constructor(private route: ActivatedRoute, private mainStore: MainStore) {
@@ -27,19 +26,16 @@ export class LancamentosComponent {
       salario: new FormControl(''),
       flash: new FormControl(''),
       anotacao: new FormControl(''),
-      recorrente: new FormControl('')
+      recorrente: new FormControl(''),
     });
   }
   updateVisibility(newValue: boolean) {
-    this.abrirModal = newValue;
+    this.isModalOpen = newValue;
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   onSubmit() {
     // Realizar o processamento do formulário
   }
-  
 }
-

@@ -1,0 +1,14 @@
+<div class="modal-overlay">
+  <div class="modal-container">
+    <div class="modal-header">
+      <ng-content select="[header]"></ng-content>
+      <button class="close-btn" (click)="close()">x</button>
+    </div>
+    <div class="modal-body">
+      <ng-content select="[body]"></ng-content>
+    </div>
+    <div class="modal-footer">
+      <button class="save-btn">Salvar</button>
+    </div>
+  </div>
+</div>
