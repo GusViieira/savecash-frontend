@@ -34,6 +34,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './Componentes/Views/login/login.component';
 import { ImageModule } from 'primeng/image';
 import { PasswordModule } from 'primeng/password';
+import { ModalComponent } from './Componentes/shared/modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { PasswordModule } from 'primeng/password';
     PerfilComponent,
     ConfiguracoesComponent,
     AppModalComponent,
-    LoginComponent
+    LoginComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,

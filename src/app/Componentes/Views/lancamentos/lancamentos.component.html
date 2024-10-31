@@ -1,6 +1,6 @@
 <app-app-card>
     <div class="card-header">
-        <button class="register-btn" (click)="abrirModal = true">
+        <button class="register-btn" (click)="isModalOpen = true">
             Registrar
             <i class="pi pi-plus"></i>
         </button>
@@ -16,25 +16,42 @@
     </div>
 </app-app-card>
 
-<app-app-modal *ngIf="abrirModal" (visibleChange)="updateVisibility($event)" tituloModal="Registrar novo lançamento">
-    <div class="card-body">
+<!-- <app-app-modal *ngIf="abrirModal" (visibleChange)="updateVisibility($event)" tituloModal="Registrar novo lançamento">
+    
+</app-app-modal> -->
 
-        <div class="ui-g-12 mb-6">
-            <button [ngClass]="btnLancamento === true ? 'btn-receita' : 'btn-receita-disabled'"
-                (click)="btnLancamento = true"><i class="pi pi-plus"></i> Receita</button>
-            <button class="btn-despesa" [ngClass]="!btnLancamento === true ? 'btn-despesa' : 'btn-despesa-disabled'"
-                (click)="btnLancamento = false"><i class="pi pi-minus"></i> Despesa</button>
-        </div>
+<app-modal *ngIf="isModalOpen" (closeModal)="isModalOpen = false">
+    <div header>
+        <h3>Registrar lançamento</h3>
+    </div>
+    <div body>
+        <div class="card-body">
 
-        <div class="flex gap-3" *ngIf="btnLancamento">
+            <div class="ui-g-12 mb-6">
+                <button [ngClass]="btnLancamento === true ? 'btn-receita' : 'btn-receita-disabled'" (click)="btnLancamento = true"><i class="pi pi-plus"></i> Receita</button>
+                <button class="btn-despesa" [ngClass]="!btnLancamento === true ? 'btn-despesa' : 'btn-despesa-disabled'" (click)="btnLancamento = false"><i class="pi pi-minus"></i> Despesa</button>
+            </div>
+
+            <div class="flex gap-3" *ngIf="btnLancamento">
                 <span class="p-float-label flex-grow-1 flex align-items-center justify-content-center">
-                <input pInputText id="username" class="w-full" />
-                <label htmlFor="username">Username</label>
+                    <input pInputText id="username" class="w-full" style="width: 200px;" />
+                    <label htmlFor="username">Valor</label>
                 </span>
                 <span class="p-float-label flex-grow-1 flex align-items-center justify-content-center">
-                <input pInputText class="w-full" />
-                <label htmlFor="username">Username</label>
+                    <input pInputText class="w-full" />
+                    <label htmlFor="username">Descrição</label>
                 </span>
+            </div>
+            <div class="flex gap-3 pt-3" *ngIf="btnLancamento">
+                <span class="p-float-label flex-grow-1 flex align-items-center justify-content-center">
+                    <input pInputText id="username" class="w-full" />
+                    <label htmlFor="username">Valor</label>
+                </span>
+                <span class="p-float-label flex-grow-1 flex align-items-center justify-content-center">
+                    <input pInputText class="w-full" />
+                    <label htmlFor="username">Descrição</label>
+                </span>
+            </div>
         </div>
     </div>
-</app-app-modal>
+</app-modal>

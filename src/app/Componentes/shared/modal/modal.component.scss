@@ -1,0 +1,62 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-container {
+  background: #333333;
+  width: 50%;
+  max-width: 600px; /* Limite de largura para telas grandes */
+  min-width: 300px; /* Largura mínima para telas menores */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1001;
+  position: relative; /* Mantém o modal no centro */
+}
+
+.modal-header {
+  background-color: #454545;
+  color: #9b51e0;
+  font-size: 36;
+  padding: 24px 36px 24px 36px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.close-btn {
+  font-weight: bold;
+  background: #9b51e0;
+  border: none;
+  border-radius: 100%;
+  color: #4e0a8e;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 1rem;
+}
+
+.modal-footer {
+  padding: 1rem;
+  text-align: right;
+}
+
+.save-btn {
+  background-color: #9b51e0;
+  font-weight: bold;
+  border: none;
+  color: #4e0a8e;
+  border-radius: 50px;
+  padding: 7px 16px;
+}
